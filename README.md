@@ -13,25 +13,22 @@ Pizza-Runner-Analytics ├── data/ │   ├── data_cleaning.sql        
 
 ## **🚀 Getting Started**
 
-### **Clone the repository**
-```bash
-git clone https://github.com/yourusername/Pizza-Runner-Analytics.git
-cd Pizza-Runner-Analytics
+### **Setup Environment**
 
+Use [DB Fiddle](https://www.db-fiddle.com/) or any SQL IDE of your choice (e.g., DBeaver, PgAdmin, SQL Server).
 
 ---
 
-⚙️ Setup Environment
-
-Use DB Fiddle or any SQL IDE of your choice (e.g., DBeaver, PgAdmin, SQL Server).
-
-1. Run the schema
-
+### **1. Run the Schema**
+```sql
 -- Inside schema/schema.sql
 CREATE TABLE pizza_runner.runners (...);
 -- (all table definitions here)
 
-2. Load raw and cleaned data
+
+---
+
+2. Load Raw and Cleaned Data
 
 -- Inside data/data_cleaning.sql
 -- Cleans nulls, whitespace, and incorrect data types
@@ -126,6 +123,16 @@ Ensure correct data types (e.g., convert distance to float) before calculations
 
 ---
 
+📥 Clone the Repository
+
+Clone this project using the command below:
+
+git clone https://github.com/yourusername/Pizza-Runner-Analytics.git
+cd Pizza-Runner-Analytics
+
+
+---
+
 📝 License & Credits
 
 MIT License © 2025
@@ -154,3 +161,4 @@ GitHub: @Gyanankur23
 ---
 
 ⭐ If you found this project helpful, give it a star!
+
