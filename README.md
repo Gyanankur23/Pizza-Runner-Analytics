@@ -18,21 +18,20 @@ Pizza-Runner-Analytics ├── data/ │   ├── data_cleaning.sql        
 git clone https://github.com/yourusername/Pizza-Runner-Analytics.git
 cd Pizza-Runner-Analytics
 
-Setup Environment
+
+---
+
+⚙️ Setup Environment
 
 Use DB Fiddle or any SQL IDE of your choice (e.g., DBeaver, PgAdmin, SQL Server).
 
-1. Run the schema:
-
-
+1. Run the schema
 
 -- Inside schema/schema.sql
 CREATE TABLE pizza_runner.runners (...);
 -- (all table definitions here)
 
-2. Load raw and cleaned data:
-
-
+2. Load raw and cleaned data
 
 -- Inside data/data_cleaning.sql
 -- Cleans nulls, whitespace, and incorrect data types
@@ -57,14 +56,21 @@ SELECT COUNT(*) AS total_pizzas_ordered FROM customer_orders;
 File: queries/runner_customer_experience.sql
 
 -- Avg time to pickup per runner
-SELECT runner_id, AVG(duration) FROM runner_orders WHERE cancellation IS NULL GROUP BY runner_id;
+SELECT runner_id, AVG(duration) 
+FROM runner_orders 
+WHERE cancellation IS NULL 
+GROUP BY runner_id;
 
 3. Ingredient Optimisation
 
 File: queries/ingredient_optimisation.sql
 
 -- Most common extras added
-SELECT extras, COUNT(*) FROM customer_orders WHERE extras IS NOT NULL GROUP BY extras ORDER BY COUNT(*) DESC;
+SELECT extras, COUNT(*) 
+FROM customer_orders 
+WHERE extras IS NOT NULL 
+GROUP BY extras 
+ORDER BY COUNT(*) DESC;
 
 4. Pricing & Ratings
 
@@ -80,12 +86,13 @@ FROM customer_orders;
 File: queries/bonus_questions.sql
 
 -- Adding a new pizza type
-INSERT INTO pizza_names (pizza_id, pizza_name) VALUES (3, 'Supreme');
+INSERT INTO pizza_names (pizza_id, pizza_name) 
+VALUES (3, 'Supreme');
 
 
 ---
 
-⚙️ Transformed Data Usage
+🛠️ Transformed Data Usage
 
 The transformed data files in data/transformed_data/ provide a cleaned version of the original data. These include:
 
@@ -113,7 +120,7 @@ Null-safe handling is used for filters like:
 
 WHERE cancellation IS NULL
 
-Ensure the correct data types (e.g., convert distance to float) before performing calculations
+Ensure correct data types (e.g., convert distance to float) before calculations
 
 
 
@@ -123,7 +130,7 @@ Ensure the correct data types (e.g., convert distance to float) before performin
 
 MIT License © 2025
 Created for the 8 Week SQL Challenge by Danny Ma
-Analytics Project & Repository by Gyanankur Baruah.
+Analytics Project & Repository by Gyanankur Baruah
 
 
 ---
@@ -131,14 +138,14 @@ Analytics Project & Repository by Gyanankur Baruah.
 ✨ Contributions Welcome!
 
 Found a bug? Want to improve queries?
-Feel free to fork the repo and submit a PR!
+Feel free to fork the repo and submit a pull request (PR)!
 
 
 ---
 
 🔗 Let's Connect
 
-LinkedIn: https://www.linkedin.com/in/gyanankur-baruah-797205338?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app
+LinkedIn: Gyanankur Baruah
 
 GitHub: @Gyanankur23
 
@@ -147,6 +154,3 @@ GitHub: @Gyanankur23
 ---
 
 ⭐ If you found this project helpful, give it a star!
-
-Would you like this automatically formatted into your project folder or pushed to a GitHub repo as well?
-
