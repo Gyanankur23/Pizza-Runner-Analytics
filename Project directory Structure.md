@@ -1,7 +1,8 @@
 Pizza-Runner-Analytics
 ├── data/
 │   ├── data_cleaning.sql
-│   ├── transformed_data.sql
+│   ├── transformed_data/
+|    |——— transformed_data.sql
 ├── queries/
 │   ├── pizza_metrics.sql
 │   ├── runner_customer_experience.sql
